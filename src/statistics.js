@@ -6,7 +6,7 @@ export const standardDeviation = (values) => {
   const average = mean(values);
   const sumOfSquaredDistances = values.reduce((sum, value) => {
     const distance = value - average;
-    return sum + Math.pow(distance)
+    return sum + Math.pow(distance, 2)
   }, 0);
 
   return sumOfSquaredDistances / values.length;
